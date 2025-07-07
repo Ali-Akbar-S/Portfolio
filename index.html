@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syed Ali Akbar | Portfolio</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="DSC_626 copy.jpg" type="image/x-png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -28,9 +32,19 @@
 
         .service-card:hover {
             transform: translateY(-8px);
-            background-color: #252526;
+            background-color: #0e8c51;
             color:#fff;
             box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+        }
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 330%;
+            width: 100%;
+        }
+        #aboutme {
+            color: white;
         }
     </style>
 </head>
@@ -39,7 +53,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Syed Ali Akbar</a>
+        <a class="navbar-brand" href="#"><i class="fa fa-scale-balanced"></i> Syed Ali Akbar <i class="fa fa-gavel"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -56,21 +70,22 @@
 
 <!-- Hero Section -->
 <header id="hero" class="vh-100 d-flex align-items-center text-white" style="background-image: url('back1.jpg'); background-size: cover; background-position: center;">
-    <div class="container" data-aos="zoom-out" data-aos-duration="3000">
-        <h1 class="display-4">Syed Ali Akber</h1>
+    <div class="container" data-aos="zoom-out" data-aos-duration="3000" style="position:relative;z-index: 999">
+        <strong><h1 class="display-4">Syed Ali Akber</h1></strong>
         <b><p class="lead">Attorney at law</p></b>
-        <p>Professional Lawyer with years of experience in diverse areas of law
+        <p style="font-size: 30px">Professional Lawyer with years of experience in diverse areas of law
 
             Known for providing practical, result-oriented legal solutions</p>
-        <a href="#services" class="btn btn-outline-light mt-4">Practice Areas</a>
+        <a href="#services" class="btn btn-outline-light mt-4" >Practice Areas</a>
 
     </div>
 </header>
 
 <!-- About Section -->
-<section id="about" class="py-5 bg-light">
+<section id="about" class="py-5 bg-dark">
     <div class="container">
-        <div class="row align-items-center">
+        <div id="particles-js"></div>
+        <div class="row align-items-center" id="aboutme">
             <div class="col-md-5"  data-aos="fade-right"
                  data-aos-duration="2000">
                 <img src="ali.jpeg" class="img-fluid rounded-circle" alt="Syed Ali Akbar">
@@ -93,7 +108,7 @@
 </section>
 
 <!-- Services Section -->
-<section id="services" class="py-5 text-center bg-light">
+<section id="services" class="py-5 text-center text-white bg-dark">
     <div class="container">
         <h2 class="mb-5">Legal Services I Offer</h2>
         <div class="row g-4">
@@ -181,8 +196,8 @@
 
 
 <!-- Contact Section -->
-<section id="contact" class="py-5 bg-light">
-    <div class="container">
+<section id="contact" class="py-5 text-white bg-dark">
+    <div class="container"  data-aos="flip-down" data-aos-delay="300" data-aos-duration="2000">
         <h2 class="text-center mb-4">Get in Touch</h2>
         <form>
             <div class="row mb-3">
@@ -201,6 +216,8 @@
 <footer class="bg-dark text-white text-center py-3">
     &copy; 2025 Syed Ali Akbar. All rights reserved.
 </footer>
+<script src="particles.min.js"></script>
+<script src="app.js"></script>
 <script>
     AOS.init();
 </script>
